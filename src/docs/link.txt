@@ -1,0 +1,11 @@
+https://dev.to/m__mdy__m/understanding-cookies-and-sessions-in-nodejs-3449
+
+memory-cache
+
+node-cache
+
+https://www.timestamp-converter.com/
+
+https://stackoverflow.com/questions/52996555/generate-a-sufficient-secret-for-jwt-nodejs-lambda
+
+https://docs.google.com/spreadsheets/d/1Y-BI1B0UAItAOdNdyD5tkNCeytNPaXD_/edit#gid=1044005935

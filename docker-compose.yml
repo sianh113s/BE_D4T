@@ -1,0 +1,37 @@
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: d4t-api
+    container_name: d4t-api
+    restart: unless-stopped
+    env_file: .env
+    environment:
+      - PORT=$PORT
+      - MYSQL_HOST=$MYSQL_HOST
+      - MYSQL_USER=$MYSQL_USER
+      - MYSQL_PASSWORD=$MYSQL_PASSWORD
+      - MYSQL_PORT=$MYSQL_PORT
+      - MYSQL_DB_NAME=$MYSQL_DB_NAME
+      - JWT_KEY=$JWT_KEY
+      - MONGO_URI=$MONGO_URI
+      - PAYOS_CLIENT_ID=$PAYOS_CLIENT_ID
+      - PAYOS_API_KEY=$PAYOS_API_KEY
+      - PAYOS_CHECKSUM_KEY=$PAYOS_CHECKSUM_KEY
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/home/node/app
+      - node_modules:/home/node/app/node_modules
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  node_modules:
+# docker compose up -d
+# docker compose down
